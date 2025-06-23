@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>verospace_property-detail-page</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="../css/property-detail-style.css" />
+    <!-- fontawesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- google lato font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link swiper -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!--Add AOS CSS in <head> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <!-- ------------------------ -->
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <div class="container">
+          <!-- <div class="row"> -->
+          <div class="row desktop-nav">
+            <div class="nav-item">
+              <ul>
+                <li><a href="../html/home.html">Home</a></li>
+                <li>
+                  <a href="../html/aboutus.html">About us</a>
+                </li>
+                <li>
+                  <a href="../html/property.html" style="color: #543ad7"
+                    >Properties</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="nav-logo">
+              <a href="/">
+                <img src="../img/home-images/logo.png" alt="logo" />
+              </a>
+            </div>
+
+            <div class="nav-btn">
+              <a href="../html/contactus.html" class="contact">Contact us</a>
+              <a href="" class="login" id="loginBtn">login</a>
+            </div>
+          </div>
+
+          <!-- hamberger -->
+          <div class="hamberger" id="hamberger">
+            <i class="fa-solid fa-bars-staggered"></i>
+          </div>
+
+          <div class="overlay" id="overlay"></div>
+
+          <nav class="nav" id="nav">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <ul class="nav-collapse">
+              <li><a href="../html/home.html">Home</a></li>
+              <li><a href="../html/aboutus.html">About us</a></li>
+              <li>
+                <a href="../html/property.html" style="color: #543ad7"
+                  >Properties</a
+                >
+              </li>
+              <li>
+                <a href="../html/contactus.html" class="contact">Contact us</a>
+              </li>
+              <li><a href="" class="logins" id="mobileLoginBtn">login</a></li>
+            </ul>
+          </nav>
+
+          <!-- ------------modals------------------ -->
+
+          <!-- Login Modal -->
+          <div class="modal-overlay" id="loginModal">
+            <div class="modal">
+              <button class="close-modal" id="closeLoginModal">&times;</button>
+              <h2>User Login</h2>
+              <p>Hey, enter your detail to get login<br />to your account</p>
+
+              <form id="loginForm">
+                <div class="form-groupss">
+                  <input type="text" placeholder="username" required />
+                </div>
+                <div class="form-groupss">
+                  <input type="password" placeholder="password" required />
+                </div>
+                <div class="forgot-password">
+                  <a href="#" id="forgotPasswordLink">Forgot password?</a>
+                </div>
+                <button type="submit" class="modal-btn">LOGIN</button>
+                <div class="switch-modal">
+                  You don't have an account?
+                  <a href="#" id="switchToRegister">Create an account</a>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Register Modal -->
+          <div class="modal-overlay" id="registerModal">
+            <div class="modal">
+              <button class="close-modal" id="closeRegisterModal">
+                &times;
+              </button>
+              <h2>Create an Account</h2>
+              <p>Fill up details below to get register</p>
+
+              <form id="registerForm">
+                <div class="form-rowss">
+                  <div class="form-groupss">
+                    <input type="text" placeholder="First name" required />
+                  </div>
+                  <div class="form-groupss">
+                    <input type="text" placeholder="Last name" required />
+                  </div>
+                </div>
+                <div class="form-rowss">
+                  <div class="form-groupss">
+                    <input type="tel" placeholder="Phone" required />
+                  </div>
+                  <div class="form-groupss">
+                    <input type="email" placeholder="Email" required />
+                  </div>
+                </div>
+                <div class="form-groupss">
+                  <input type="password" placeholder="Password" required />
+                </div>
+                <div class="form-groupss">
+                  <input
+                    type="password"
+                    placeholder="Confirm password"
+                    required
+                  />
+                </div>
+                <div class="terms-text">
+                  By create an account accept our Term & Condition
+                </div>
+                <button type="submit" class="modal-btn">REGISTER</button>
+                <div class="switch-modal">
+                  Already have an account?
+                  <a href="#" id="switchToLogin">Login here</a>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- ---------------------- -->
+
+          <!-- </div> -->
+        </div>
+      </div>
+      <div
+        class="hero-section"
+        data-aos="zoom-in-up"
+        data-aos-delay="300"
+        data-aos-duration="1200"
+      >
+        <h1>properties</h1>
+        <div class="hero-arrow">
+          <a href="../html/home.html" style="color: white">Home</a>
+          <img src="../img/aboutus-images/arrow.png" alt="" />
+          <a href="../html/property-detail.html" style="color: white"
+            >Property Detail</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- ------------------------features villa--------------------------- -->
+    <section class="features-villa">
+      <div class="container">
+        <div class="property-cards">
+          <div class="property-images"></div>
+          <div class="property-info">
+            <div class="info-container">
+              <div class="info-item">
+                <div class="info-icon icon-building"></div>
+                <div class="info-content">
+                  <div class="info-label">Property Type</div>
+                  <div class="info-value">Villa</div>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon icon-bed"></div>
+                <div class="info-content">
+                  <div class="info-label">No of Bedrooms</div>
+                  <div class="info-value">3 Beds</div>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon icon-bath"></div>
+                <div class="info-content">
+                  <div class="info-label">No of Bathrooms</div>
+                  <div class="info-value">4 Baths</div>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon icon-area"></div>
+                <div class="info-content">
+                  <div class="info-label">Spacious Life</div>
+                  <div class="info-value">1500 Sq</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------sobha----------------------------- -->
+    <section class="sobha">
+      <div class="container">
+        <div class="property-layout">
+          <div class="property-info1">
+            <div class="location">
+              <div class="location-icon"></div>
+              <span>Musterstrase 17, 1017 Berlin, Germany</span>
+            </div>
+
+            <h1 class="property-title">Sobha Heartland Villa</h1>
+
+            <p class="property-description">
+              Lorem ipsum dolor sit amet consectetur. Ac scelerisque mauris enim
+              ut massa turpis donec sem ac. Vulputate tortor turpis turpis sit
+              nulla ut vel ipsum. Enim sed eu aliquam donec
+            </p>
+
+            <p class="property-description">
+              ullamcorper massa nec aliquet malesuada risus. Eget vitae felis
+              faucibus proin morbi sed. Vitae posuere dolor eget vestibulum
+            </p>
+          </div>
+
+          <div class="images-section">
+            <div class="images-section1">
+              <img
+                src="../img/property-detail-images/sobha-small-1.png"
+                alt="Bedroom with tropical wallpaper and wooden furniture"
+                class="image-bedroom"
+              />
+              <img
+                src="../img/property-detail-images/sobha-small-2.png"
+                alt="Modern bathroom with marble walls"
+                class="image-bathroom"
+              />
+            </div>
+            <div class="images-section2">
+              <img
+                src="../img/property-detail-images/sobha-big-right.png"
+                alt="Living room with grey sectional sofa"
+                class="image-living"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------floorplan-amenities------------------- -->
+    <section class="floorplan-amenities">
+      <div class="container">
+        <div class="row">
+          <div class="floor-plan">
+            <div class="floorplan-content">Floor Plan</div>
+            <img src="../img/property-detail-images/floor-plan.png" alt="" />
+          </div>
+          <div class="amenities-line"></div>
+          <div class="amenities">
+            <div class="amenities-container">
+              <h2 class="amenities-title">Amenities</h2>
+
+              <div class="amenities-grid">
+                <div class="amenities-column">
+                  <div class="amenity-item">
+                    <div class="amenity-checkbox checked"></div>
+                    <span class="amenity-label checked">Parking Lot</span>
+                  </div>
+                  <div class="amenity-item">
+                    <div class="amenity-checkbox checked"></div>
+                    <span class="amenity-label checked">Wi-Fi</span>
+                  </div>
+                  <div class="amenity-item">
+                    <div class="amenity-checkbox checked"></div>
+                    <span class="amenity-label checked">Gym</span>
+                  </div>
+                  <div class="amenity-item">
+                    <div class="amenity-checkbox"></div>
+                    <span class="amenity-label unchecked">Parking Lot</span>
+                  </div>
+                  <div class="amenity-item">
+                    <div class="amenity-checkbox"></div>
+                    <span class="amenity-label unchecked">Wi-Fi</span>
+                  </div>
+                </div>
+
+                <div class="amenities-column">
+                  <div class="amenity-item">
+                    <div class="amenity-checkbox checked"></div>
+                    <span class="amenity-label checked">Balcony</span>
+                  </div>
+                  <div class="amenity-item">
+                    <div class="amenity-checkbox"></div>
+                    <span class="amenity-label unchecked">Ocean View</span>
+                  </div>
+                  <div class="amenity-item">
+                    <div class="amenity-checkbox checked"></div>
+                    <span class="amenity-label checked">Near Hospital</span>
+                  </div>
+                  <div class="amenity-item">
+                    <div class="amenity-checkbox"></div>
+                    <span class="amenity-label unchecked">Balcony</span>
+                  </div>
+                  <div class="amenity-item">
+                    <div class="amenity-checkbox"></div>
+                    <span class="amenity-label unchecked">Ocean View</span>
+                  </div>
+                </div>
+
+                <div class="amenities-column">
+                  <div class="amenity-item">
+                    <div class="amenity-checkbox"></div>
+                    <span class="amenity-label unchecked">Lawn</span>
+                  </div>
+                  <div class="amenity-item">
+                    <div class="amenity-checkbox checked"></div>
+                    <span class="amenity-label checked">Fireplace</span>
+                  </div>
+                  <div class="amenity-item">
+                    <div class="amenity-checkbox checked"></div>
+                    <span class="amenity-label checked">Laundry</span>
+                  </div>
+                  <div class="amenity-item">
+                    <div class="amenity-checkbox"></div>
+                    <span class="amenity-label unchecked">Lawn</span>
+                  </div>
+                  <div class="amenity-item">
+                    <div class="amenity-checkbox"></div>
+                    <span class="amenity-label unchecked">Fireplace</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------request showing-------------------------- -->
+    <section class="request-showing">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col8 get-in-touch-right"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <div class="form-container">
+              <div id="successMessage" class="success-message">
+                Thank you! Your message has been sent successfully.
+              </div>
+              <div id="errorMessage" class="error-message">
+                Please fill in all required fields.
+              </div>
+
+              <form id="contactForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      placeholder="First Name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      placeholder="Last name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="Phone Number"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Email Address"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group full-width">
+                    <label for="message">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+              </form>
+            </div>
+          </div>
+          <div
+            class="col4 request-showing-right"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <div class="dash-about">
+              <span></span>
+              <p>Request a Showing</p>
+            </div>
+            <h2>Do You Want To Visit This Property</h2>
+            <p style="color: #666666">
+              Lorem ipsum dolor sit amet consectetur. Ac scelerisque mauris enim
+              ut massa turpis donec sem ac. Vulputate tortor turpis turpis sit
+              nulla ut vel ipsum. Enim sed eu aliquam donec
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------swiper-listed---------------------- -->
+
+    <section
+      class="swiper-listed-properties"
+      data-aos="fade-up"
+      data-aos-delay="300"
+      data-aos-duration="1000"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col12">
+            <div class="section-header">
+              <div class="header-content">
+                <div>
+                  <div class="section-subtitle">Recently Added</div>
+                  <h2 class="section-title">
+                    Explore Our Newly Listed Properties
+                  </h2>
+                </div>
+                <a href="#" class="all-listing-btn">All Listing</a>
+              </div>
+            </div>
+
+            <!-- <div class="swiper propertySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="property-card">
+                    <div class="property-image property-1">
+                      <div class="property-rating">
+                        <img src="../img/home-images/star.png" alt="" />
+                        <span>4.8</span>
+                      </div>
+                    </div>
+                    <div class="property-content">
+                      <h3 class="property-title">Sobha Heartland Villa</h3>
+                      <div class="property-location">
+                        <img src="../img/home-images/location.png" alt="" />
+                        Berlin, Germany
+                      </div>
+                      <button class="detail-btn">Detail</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="property-card">
+                    <div class="property-image property-2">
+                      <div class="property-rating">
+                        <img src="../img/home-images/star.png" alt="" />
+                        <span>4.8</span>
+                      </div>
+                    </div>
+                    <div class="property-content">
+                      <h3 class="property-title">Hillside Haven</h3>
+                      <div class="property-location">
+                        <img src="../img/home-images/location.png" alt="" />
+                        Genoa, Italy
+                      </div>
+                      <button class="detail-btn">Detail</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="property-card">
+                    <div class="property-image property-3">
+                      <div class="property-rating">
+                        <img src="../img/home-images/star.png" alt="" />
+                        <span>4.8</span>
+                      </div>
+                    </div>
+                    <div class="property-content">
+                      <h3 class="property-title">Island Paradise Villa</h3>
+                      <div class="property-location">
+                        <img src="../img/home-images/location.png" alt="" />
+                        Paris, France
+                      </div>
+                      <button class="detail-btn">Detail</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="property-card">
+                    <div class="property-image property-4">
+                      <div class="property-rating">
+                        <img src="../img/home-images/star.png" alt="" />
+                        <span>4.8</span>
+                      </div>
+                    </div>
+                    <div class="property-content">
+                      <h3 class="property-title">Emerald Coast Manor</h3>
+                      <div class="property-location">
+                        <img src="../img/home-images/location.png" alt="" />
+                        Lyon, France
+                      </div>
+                      <button class="detail-btn">Detail</button>
+                    </div>
+                  </div>
+                </div>
+
+                
+                <div class="swiper-slide">
+                  <div class="property-card">
+                    <div class="property-image property-1">
+                      <div class="property-rating">
+                        <img src="../img/home-images/star.png" alt="" />
+                        <span>4.7</span>
+                      </div>
+                    </div>
+                    <div class="property-content">
+                      <h3 class="property-title">Mountain View Estate</h3>
+                      <div class="property-location">
+                        <img src="../img/home-images/location.png" alt="" />
+                        Swiss Alps, Switzerland
+                      </div>
+                      <button class="detail-btn">Detail</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="property-card">
+                    <div class="property-image property-2">
+                      <div class="property-rating">
+                        <img src="../img/home-images/star.png" alt="" />
+                        <span>4.9</span>
+                      </div>
+                    </div>
+                    <div class="property-content">
+                      <h3 class="property-title">Coastal Luxury Home</h3>
+                      <div class="property-location">
+                        <img src="../img/home-images/location.png" alt="" />
+                        Barcelona, Spain
+                      </div>
+                      <button class="detail-btn">Detail</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div> -->
+
+            <div class="property-gallery-wrapper">
+              <div class="swiper property-swiper-container">
+                <div class="swiper-wrapper">
+                  <!-- Property 1 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="real-estate-card estate-bg-1"
+                      data-estate="little-acom"
+                    >
+                      <div class="estate-card-info">
+                        <h3 class="estate-title">Little Acom</h3>
+                        <div class="estate-rating-section">
+                          <span class="rating-star-icon">★</span>
+                          <span class="rating-score">4.8</span>
+                        </div>
+                        <div class="estate-location-info">
+                          <div class="location-indicator-dot"></div>
+                          <span>Berlin, Germany</span>
+                        </div>
+                      </div>
+                      <button
+                        class="estate-detail-btn"
+                        onclick="showEstateDetails('Little Acom')"
+                      >
+                        Detail
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Property 2 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="real-estate-card estate-bg-2"
+                      data-estate="hillside-haven"
+                    >
+                      <div class="estate-card-info">
+                        <h3 class="estate-title">Hillside Haven</h3>
+                        <div class="estate-rating-section">
+                          <span class="rating-star-icon">★</span>
+                          <span class="rating-score">4.8</span>
+                        </div>
+                        <div class="estate-location-info">
+                          <div class="location-indicator-dot"></div>
+                          <span>Genoa, Italy</span>
+                        </div>
+                      </div>
+                      <button
+                        class="estate-detail-btn"
+                        onclick="showEstateDetails('Hillside Haven')"
+                      >
+                        Detail
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Property 3 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="real-estate-card estate-bg-3"
+                      data-estate="island-paradise"
+                    >
+                      <div class="estate-card-info">
+                        <h3 class="estate-title">Island Paradise Villa</h3>
+                        <div class="estate-rating-section">
+                          <span class="rating-star-icon">★</span>
+                          <span class="rating-score">4.8</span>
+                        </div>
+                        <div class="estate-location-info">
+                          <div class="location-indicator-dot"></div>
+                          <span>Paris, France</span>
+                        </div>
+                      </div>
+                      <button
+                        class="estate-detail-btn"
+                        onclick="showEstateDetails('Island Paradise Villa')"
+                      >
+                        Detail
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Property 4 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="real-estate-card estate-bg-4"
+                      data-estate="emerald-coast"
+                    >
+                      <div class="estate-card-info">
+                        <h3 class="estate-title">Emerald Coast Manor</h3>
+                        <div class="estate-rating-section">
+                          <span class="rating-star-icon">★</span>
+                          <span class="rating-score">4.8</span>
+                        </div>
+                        <div class="estate-location-info">
+                          <div class="location-indicator-dot"></div>
+                          <span>Lyon, France</span>
+                        </div>
+                      </div>
+                      <button
+                        class="estate-detail-btn"
+                        onclick="showEstateDetails('Emerald Coast Manor')"
+                      >
+                        Detail
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Property 5 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="real-estate-card estate-bg-5"
+                      data-estate="sunset-villa"
+                    >
+                      <div class="estate-card-info">
+                        <h3 class="estate-title">Sunset Villa</h3>
+                        <div class="estate-rating-section">
+                          <span class="rating-star-icon">★</span>
+                          <span class="rating-score">4.9</span>
+                        </div>
+                        <div class="estate-location-info">
+                          <div class="location-indicator-dot"></div>
+                          <span>Barcelona, Spain</span>
+                        </div>
+                      </div>
+                      <button
+                        class="estate-detail-btn"
+                        onclick="showEstateDetails('Sunset Villa')"
+                      >
+                        Detail
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Property 6 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="real-estate-card estate-bg-6"
+                      data-estate="ocean-breeze"
+                    >
+                      <div class="estate-card-info">
+                        <h3 class="estate-title">Ocean Breeze</h3>
+                        <div class="estate-rating-section">
+                          <span class="rating-star-icon">★</span>
+                          <span class="rating-score">4.7</span>
+                        </div>
+                        <div class="estate-location-info">
+                          <div class="location-indicator-dot"></div>
+                          <span>Miami, USA</span>
+                        </div>
+                      </div>
+                      <button
+                        class="estate-detail-btn"
+                        onclick="showEstateDetails('Ocean Breeze')"
+                      >
+                        Detail
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Property 7 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="real-estate-card estate-bg-7"
+                      data-estate="mountain-retreat"
+                    >
+                      <div class="estate-card-info">
+                        <h3 class="estate-title">Mountain Retreat</h3>
+                        <div class="estate-rating-section">
+                          <span class="rating-star-icon">★</span>
+                          <span class="rating-score">4.6</span>
+                        </div>
+                        <div class="estate-location-info">
+                          <div class="location-indicator-dot"></div>
+                          <span>Aspen, USA</span>
+                        </div>
+                      </div>
+                      <button
+                        class="estate-detail-btn"
+                        onclick="showEstateDetails('Mountain Retreat')"
+                      >
+                        Detail
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Property 8 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="real-estate-card estate-bg-8"
+                      data-estate="city-penthouse"
+                    >
+                      <div class="estate-card-info">
+                        <h3 class="estate-title">City Penthouse</h3>
+                        <div class="estate-rating-section">
+                          <span class="rating-star-icon">★</span>
+                          <span class="rating-score">4.9</span>
+                        </div>
+                        <div class="estate-location-info">
+                          <div class="location-indicator-dot"></div>
+                          <span>New York, USA</span>
+                        </div>
+                      </div>
+                      <button
+                        class="estate-detail-btn"
+                        onclick="showEstateDetails('City Penthouse')"
+                      >
+                        Detail
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Property 9 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="real-estate-card estate-bg-9"
+                      data-estate="lakeside-cabin"
+                    >
+                      <div class="estate-card-info">
+                        <h3 class="estate-title">Lakeside Cabin</h3>
+                        <div class="estate-rating-section">
+                          <span class="rating-star-icon">★</span>
+                          <span class="rating-score">4.5</span>
+                        </div>
+                        <div class="estate-location-info">
+                          <div class="location-indicator-dot"></div>
+                          <span>Lake Tahoe, USA</span>
+                        </div>
+                      </div>
+                      <button
+                        class="estate-detail-btn"
+                        onclick="showEstateDetails('Lakeside Cabin')"
+                      >
+                        Detail
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Property 10 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="real-estate-card estate-bg-10"
+                      data-estate="desert-oasis"
+                    >
+                      <div class="estate-card-info">
+                        <h3 class="estate-title">Desert Oasis</h3>
+                        <div class="estate-rating-section">
+                          <span class="rating-star-icon">★</span>
+                          <span class="rating-score">4.7</span>
+                        </div>
+                        <div class="estate-location-info">
+                          <div class="location-indicator-dot"></div>
+                          <span>Phoenix, USA</span>
+                        </div>
+                      </div>
+                      <button
+                        class="estate-detail-btn"
+                        onclick="showEstateDetails('Desert Oasis')"
+                      >
+                        Detail
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Property 11 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="real-estate-card estate-bg-11"
+                      data-estate="coastal-mansion"
+                    >
+                      <div class="estate-card-info">
+                        <h3 class="estate-title">Coastal Mansion</h3>
+                        <div class="estate-rating-section">
+                          <span class="rating-star-icon">★</span>
+                          <span class="rating-score">4.8</span>
+                        </div>
+                        <div class="estate-location-info">
+                          <div class="location-indicator-dot"></div>
+                          <span>Malibu, USA</span>
+                        </div>
+                      </div>
+                      <button
+                        class="estate-detail-btn"
+                        onclick="showEstateDetails('Coastal Mansion')"
+                      >
+                        Detail
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Property 12 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="real-estate-card estate-bg-12"
+                      data-estate="urban-loft"
+                    >
+                      <div class="estate-card-info">
+                        <h3 class="estate-title">Urban Loft</h3>
+                        <div class="estate-rating-section">
+                          <span class="rating-star-icon">★</span>
+                          <span class="rating-score">4.6</span>
+                        </div>
+                        <div class="estate-location-info">
+                          <div class="location-indicator-dot"></div>
+                          <span>London, UK</span>
+                        </div>
+                      </div>
+                      <button
+                        class="estate-detail-btn"
+                        onclick="showEstateDetails('Urban Loft')"
+                      >
+                        Detail
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Custom Navigation -->
+                <div class="property-swiper-nav property-swiper-prev">‹</div>
+                <div class="property-swiper-nav property-swiper-next">›</div>
+
+                <!-- Custom Pagination -->
+                <div class="property-swiper-pagination"></div>
+              </div>
+
+              <!-- Autoplay Controls -->
+              <!-- <div class="autoplay-controls">
+                <button
+                  class="autoplay-btn active"
+                  id="playBtn"
+                  onclick="toggleAutoplay()"
+                >
+                  ⏸️ Pause
+                </button>
+                <button class="autoplay-btn" onclick="changeSpeed('slow')">
+                  🐌 Slow
+                </button>
+                <button class="autoplay-btn" onclick="changeSpeed('normal')">
+                  ⚡ Normal
+                </button>
+                <button class="autoplay-btn" onclick="changeSpeed('fast')">
+                  🚀 Fast
+                </button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------Newsletter---------------------------------------- -->
+
+    <section class="newsletter" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col6 news-left"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <h3>Newsletter To Get Updated The Latest News</h3>
+          </div>
+          <div
+            class="col6 news-right"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <div class="email">
+              <div class="form-container1" id="formContainer1">
+                <form id="emailForm" novalidate>
+                  <div class="email-input-wrapper">
+                    <input
+                      type="email"
+                      id="emailInput"
+                      class="email-input"
+                      placeholder="Enter Your Email"
+                      autocomplete="email"
+                      style="border: 2px solid #333333"
+                      required
+                    />
+                    <div class="error-message1" id="errorMessage1"></div>
+                    <div class="success-message1" id="successMessage1"></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="login subscribe">Subscribe</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+
+    <!-- ------------------------------footer---------------------------- -->
+
+    <section class="footer" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <div class="row">
+          <div
+            class="footer-content"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <div class="footer-logo">
+              <img src="../img/home-images/logo.png" alt="" />
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Pharetra ornare aliquet
+              nunc dui in scelerporttitor. Proin ullamcorper.
+            </p>
+            <div class="footer-social-link">
+              <img src="../img/home-images/fb.png" alt="" />
+              <img src="../img/home-images/twtr.png" alt="" />
+              <img src="../img/home-images/insta.png" alt="" />
+              <img src="../img/home-images/utube.png" alt="" />
+            </div>
+          </div>
+          <div class="footer-link" data-aos="fade-up" data-aos-duration="1200">
+            <h3>Useful Links</h3>
+            <div class="links">
+              <p><a href="../html/home.html">Home</a></p>
+              <p><a href="../html/aboutus.html">About Us</a></p>
+              <p><a href="../html/property.html">Properties</a></p>
+              <p><a href="../html/contactus.html">Contact Us</a></p>
+            </div>
+          </div>
+          <div
+            class="footer-property"
+            data-aos="fade-left"
+            data-aos-duration="1400"
+          >
+            <h3>Our Properties</h3>
+            <div class="row1">
+              <img src="../img/home-images/footer1.png" alt="" />
+              <img src="../img/home-images/footer2.png" alt="" />
+              <img src="../img/home-images/footer3.png" alt="" />
+              <img src="../img/home-images/footer4.png" alt="" />
+            </div>
+            <div class="row2">
+              <img src="../img/home-images/footer2(1).png" alt="" />
+              <img src="../img/home-images/footer2(2).png" alt="" />
+              <img src="../img/home-images/footer2(3).png" alt="" />
+              <img src="../img/home-images/footer2(4).png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+
+    <!------------------------------copyright---------------------------- -->
+
+    <section class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="copy-left">
+            <p>Copyright &copy;2024 VeroSpace, All rights reserved</p>
+          </div>
+          <div class="copy-right">
+            <span>Term of Service</span>
+            <span>Privacy Policy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------------------script----------------------- -->
+
+    <script src="../JS/hamberger.js"></script>
+    <!-- <script src="../JS/get-info-form-properties.js"></script> -->
+    <script src="../JS/floorplan-amenities-check.js"></script>
+    <script src="../JS/get-in-touch-right-form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../JS/property-list-swiper-pagenation.js"></script>
+    <!-- <script src="../JS/swiper-listed-properties.js"></script> -->
+    <!-- --newsletter form-- -->
+    <script src="../JS/form-error.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true, // animation only once on scroll
+        offset: 100, // offset trigger
+      });
+    </script>
+  </body>
+</html>
