@@ -4,9 +4,9 @@
   box-sizing: border-box;
   font-family: lato, sans-serif;
 }
-/* body {
-  overflow-x: hidden!important;
-} */
+html,body {
+  overflow-x: hidden !important;
+}
 .container {
   max-width: 1290px;
   margin: 0 auto;
