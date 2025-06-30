@@ -73,7 +73,7 @@ header > div > div > div {
 .nav {
   position: fixed;
   top: 0;
-  right: -110%;
+  right: -200%;
   width: 100vw;
   /* height: 100vh; */
   background-color: white;
