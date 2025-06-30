@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: lato, sans-serif;
 }
+/* body {
+  overflow-x: hidden!important;
+} */
 .container {
   max-width: 1290px;
   margin: 0 auto;
@@ -31,7 +34,7 @@ a:hover {
 }
 /* ----------header section------------ */
 header {
-  padding: 16px 30px;
+  padding: 16px 9px;
   background: url("../img/aboutus-images/hero-img.png") no-repeat center/cover;
   margin: 17px 30px;
   border-radius: 30px;
@@ -39,7 +42,7 @@ header {
 }
 .nav-container {
   max-width: 1359px;
-  min-height: 79px;
+  min-height: 67px;
   background-color: white;
   border-radius: 50px;
   margin: 0 auto;
@@ -59,7 +62,7 @@ header > div > div > div {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 280px;
+  width: 100vw;
   /* height: 100vh; */
   background-color: white;
   display: flex;
@@ -211,15 +214,15 @@ header > div > div > div {
   background: white;
   border-radius: 20px;
   padding: 2.5rem;
-  width: 400px;
-  max-width: 90vw;
+  /* width: 400px; */
+  max-width: 100vw;
   transform: scale(0.9);
   transition: transform 0.3s;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .modal-overlay.active .modal {
-  transform: scale(1);
+  /* transform: scale(1); */
 }
 
 .modal h2 {
@@ -1535,6 +1538,23 @@ textarea {
 .links a:hover {
   color: #543ad7 !important;
 }
+/* ----------------------------- */
+.row1 > img,
+.row2 > img {
+  max-width: 95px;
+  min-height: 64px;
+  object-fit: contain;
+}
+.footer-property {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
 
 /* -------------------------copyright------------ */
 
@@ -1556,7 +1576,7 @@ textarea {
 
 /* ----------------------------------------------------mediaquery */
 
-@media screen and (max-width: 1090px) {
+@media screen and (max-width: 1200px) {
   .footer > div > div {
     justify-content: center;
     gap: 30px;
@@ -1577,7 +1597,7 @@ textarea {
 
 /* ------------------------------------------------------------- */
 
-@media screen and (max-width: 961px) {
+@media screen and (max-width: 992px) {
   header {
     margin: 0;
     border-radius: 0;
@@ -1603,9 +1623,10 @@ textarea {
   } */
   .hamberger {
     display: block;
+    margin-top: 8px;
   }
   .fa-solid {
-    font-size: 1rem;
+    font-size: 19px;
   }
   /* #hamberger:checked ~ .nav-item,
   #hamberger:checked ~ .nav-btn {
@@ -1681,7 +1702,7 @@ textarea {
 }
 
 /* ---------------------------------------------- */
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 768px) {
   .col2,
   .col3 {
     width: 33.33%;
@@ -2000,7 +2021,7 @@ textarea {
 }
 
 /* -------------------------------------------------- */
-@media screen and (max-width: 438px) {
+@media screen and (max-width: 576px) {
   .col2,
   .col3,
   .col4 {
@@ -2034,6 +2055,7 @@ textarea {
   .all-listing-btn {
     padding: 10px 25px;
     font-size: 13px;
+    margin: auto;
   }
   .carousel-track {
     animation-duration: 12s;
@@ -2115,8 +2137,8 @@ textarea {
 
   .nav-logo {
     margin-bottom: 0;
-    width: 120px;
-    margin-top: 12px;
+    width: 143px;
+    margin-top: 4px;
   }
 
   /* .profile-card {
@@ -2303,6 +2325,64 @@ textarea {
   }
   .floorplan-amenities {
     padding-top: 55px;
+  }
+  /* footer */
+  .row1,
+  .row2 {
+    width: 198px;
+  }
+  .location {
+    justify-content: center;
+  }
+  .request-showing {
+    padding-top: 44px;
+  }
+  label {
+    font-size: 16px;
+  }
+  .form-group > input[type="text"],
+  .form-group > input[type="email"],
+  .form-group > input[type="tel"],
+  .form-group > textarea {
+    padding: 16px 15px;
+    border: none;
+    border-radius: 27px;
+    font-size: 13px;
+    /* background-color: #f9fafb; */
+    transition: all 0.2s ease;
+    font-family: inherit;
+  }
+  .get-in-touch-right {
+    border-radius: 5px;
+    padding: 4px 0px;
+  }
+  .submit-btn {
+    padding: 11px 40px;
+    font-size: 13px;
+  }
+  .request-showing-right {
+    margin-top: 25px;
+  }
+  .request-showing-right > div > p {
+    font-size: 16px;
+  }
+  .request-showing-right > p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .request-showing-right > h2 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .header-content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-listed-properties {
+    padding-block: 32px;
   }
 }
 

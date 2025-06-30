@@ -45,7 +45,78 @@
 
     <!-- ------------------------ -->
   </head>
-  <body>
+  <body style="overflow-x: hidden;">
+    <!-- ------------modals------------------ -->
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+      <div class="modal">
+        <button class="close-modal" id="closeLoginModal">&times;</button>
+        <h2>User Login</h2>
+        <p>Hey, enter your detail to get login<br />to your account</p>
+
+        <form id="loginForm">
+          <div class="form-groupss">
+            <input type="text" placeholder="username" required />
+          </div>
+          <div class="form-groupss">
+            <input type="password" placeholder="password" required />
+          </div>
+          <div class="forgot-password">
+            <a href="#" id="forgotPasswordLink">Forgot password?</a>
+          </div>
+          <button type="submit" class="modal-btn">LOGIN</button>
+          <div class="switch-modal">
+            You don't have an account?
+            <a href="#" id="switchToRegister">Create an account</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal-overlay" id="registerModal">
+      <div class="modal">
+        <button class="close-modal" id="closeRegisterModal">&times;</button>
+        <h2>Create an Account</h2>
+        <p>Fill up details below to get register</p>
+
+        <form id="registerForm">
+          <div class="form-rowss">
+            <div class="form-groupss">
+              <input type="text" placeholder="First name" required />
+            </div>
+            <div class="form-groupss">
+              <input type="text" placeholder="Last name" required />
+            </div>
+          </div>
+          <div class="form-rowss">
+            <div class="form-groupss">
+              <input type="tel" placeholder="Phone" required />
+            </div>
+            <div class="form-groupss">
+              <input type="email" placeholder="Email" required />
+            </div>
+          </div>
+          <div class="form-groupss">
+            <input type="password" placeholder="Password" required />
+          </div>
+          <div class="form-groupss">
+            <input type="password" placeholder="Confirm password" required />
+          </div>
+          <div class="terms-text">
+            By create an account accept our Term & Condition
+          </div>
+          <button type="submit" class="modal-btn">REGISTER</button>
+          <div class="switch-modal">
+            Already have an account?
+            <a href="#" id="switchToLogin">Login here</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ---------------------- -->
     <header>
       <div class="nav-container">
         <div class="container">
@@ -75,11 +146,11 @@
               <a href="./contactus.html" class="contact">Contact us</a>
               <a href="" class="login" id="loginBtn">login</a>
             </div>
-          </div>
 
-          <!-- hamberger -->
-          <div class="hamberger" id="hamberger">
-            <i class="fa-solid fa-bars-staggered"></i>
+            <!-- hamberger -->
+            <div class="hamberger" id="hamberger">
+              <i class="fa-solid fa-bars-staggered"></i>
+            </div>
           </div>
 
           <div class="overlay" id="overlay"></div>
@@ -90,9 +161,7 @@
               <li><a href="./index.html">Home</a></li>
               <li><a href="./aboutus.html">About us</a></li>
               <li>
-                <a href="./property.html" style="color: #543ad7"
-                  >Properties</a
-                >
+                <a href="./property.html" style="color: #543ad7">Properties</a>
               </li>
               <li>
                 <a href="./contactus.html" class="contact">Contact us</a>
@@ -100,84 +169,6 @@
               <li><a href="" class="logins" id="mobileLoginBtn">login</a></li>
             </ul>
           </nav>
-
-          <!-- ------------modals------------------ -->
-
-          <!-- Login Modal -->
-          <div class="modal-overlay" id="loginModal">
-            <div class="modal">
-              <button class="close-modal" id="closeLoginModal">&times;</button>
-              <h2>User Login</h2>
-              <p>Hey, enter your detail to get login<br />to your account</p>
-
-              <form id="loginForm">
-                <div class="form-groupss">
-                  <input type="text" placeholder="username" required />
-                </div>
-                <div class="form-groupss">
-                  <input type="password" placeholder="password" required />
-                </div>
-                <div class="forgot-password">
-                  <a href="#" id="forgotPasswordLink">Forgot password?</a>
-                </div>
-                <button type="submit" class="modal-btn">LOGIN</button>
-                <div class="switch-modal">
-                  You don't have an account?
-                  <a href="#" id="switchToRegister">Create an account</a>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <!-- Register Modal -->
-          <div class="modal-overlay" id="registerModal">
-            <div class="modal">
-              <button class="close-modal" id="closeRegisterModal">
-                &times;
-              </button>
-              <h2>Create an Account</h2>
-              <p>Fill up details below to get register</p>
-
-              <form id="registerForm">
-                <div class="form-rowss">
-                  <div class="form-groupss">
-                    <input type="text" placeholder="First name" required />
-                  </div>
-                  <div class="form-groupss">
-                    <input type="text" placeholder="Last name" required />
-                  </div>
-                </div>
-                <div class="form-rowss">
-                  <div class="form-groupss">
-                    <input type="tel" placeholder="Phone" required />
-                  </div>
-                  <div class="form-groupss">
-                    <input type="email" placeholder="Email" required />
-                  </div>
-                </div>
-                <div class="form-groupss">
-                  <input type="password" placeholder="Password" required />
-                </div>
-                <div class="form-groupss">
-                  <input
-                    type="password"
-                    placeholder="Confirm password"
-                    required
-                  />
-                </div>
-                <div class="terms-text">
-                  By create an account accept our Term & Condition
-                </div>
-                <button type="submit" class="modal-btn">REGISTER</button>
-                <div class="switch-modal">
-                  Already have an account?
-                  <a href="#" id="switchToLogin">Login here</a>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <!-- ---------------------- -->
 
           <!-- </div> -->
         </div>
