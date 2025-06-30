@@ -4,7 +4,9 @@
   box-sizing: border-box;
   font-family: lato, sans-serif;
 }
-html,body {
+
+html,
+body {
   overflow-x: hidden !important;
 }
 .container {
@@ -32,11 +34,16 @@ a {
 a:hover {
   color: #543ad7;
 }
+
+body[data-aos-easing] {
+  overflow: hidden;
+}
+
+
 /* ----------header section------------ */
 header {
   padding: 16px 9px;
   background: url("../img/home-images/banner-img.png") no-repeat center/cover;
-  margin: 17px 30px;
   border-radius: 30px;
   /* position: relative; */
   /* position: fixed;
@@ -66,7 +73,7 @@ header > div > div > div {
 .nav {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: -110%;
   width: 100vw;
   /* height: 100vh; */
   background-color: white;

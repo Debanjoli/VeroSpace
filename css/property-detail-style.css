@@ -7,6 +7,9 @@
 html,body {
   overflow-x: hidden !important;
 }
+body[data-aos-easing] {
+  overflow: hidden;
+}
 .container {
   max-width: 1290px;
   margin: 0 auto;
