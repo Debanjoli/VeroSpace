@@ -112,129 +112,131 @@
     </div>
 
     <!-- ---------------------- -->
-    <header>
-      <div class="nav-container">
-        <div class="container">
-          <!-- <div class="row"> -->
-          <div class="row desktop-nav">
-            <div class="nav-item">
-              <ul>
+    <section class="header-container">
+      <header>
+        <div class="nav-container">
+          <div class="container">
+            <!-- <div class="row"> -->
+            <div class="row desktop-nav">
+              <div class="nav-item">
+                <ul>
+                  <li>
+                    <a href="./index.html" style="color: #543ad7">Home</a>
+                  </li>
+                  <li><a href="./aboutus.html">About us</a></li>
+                  <li><a href="./property.html">Properties</a></li>
+                </ul>
+              </div>
+
+              <div class="nav-logo">
+                <a href="./index.html">
+                  <img src="./img/home-images/logo.png" alt="logo" />
+                </a>
+              </div>
+
+              <div class="nav-btn">
+                <a href="./contactus.html" class="contact">Contact us</a>
+                <a href="" class="login" id="loginBtn">login</a>
+              </div>
+
+              <!-- hamberger -->
+              <div class="hamberger" id="hamberger">
+                <i class="fa-solid fa-bars-staggered"></i>
+              </div>
+            </div>
+
+            <div class="overlay" id="overlay"></div>
+
+            <nav class="nav" id="nav">
+              <button class="close-btn" id="closeBtn">&times;</button>
+              <ul class="nav-collapse">
                 <li>
                   <a href="./index.html" style="color: #543ad7">Home</a>
                 </li>
                 <li><a href="./aboutus.html">About us</a></li>
                 <li><a href="./property.html">Properties</a></li>
+                <li>
+                  <a href="./contactus.html" class="contact">Contact us</a>
+                </li>
+                <li><a href="" class="logins" id="mobileLoginBtn">login</a></li>
               </ul>
-            </div>
+            </nav>
 
-            <div class="nav-logo">
-              <a href="/">
-                <img src="./img/home-images/logo.png" alt="logo" />
-              </a>
-            </div>
-
-            <div class="nav-btn">
-              <a href="./contactus.html" class="contact">Contact us</a>
-              <a href="" class="login" id="loginBtn">login</a>
-            </div>
-
-            <!-- hamberger -->
-            <div class="hamberger" id="hamberger">
-              <i class="fa-solid fa-bars-staggered"></i>
-            </div>
+            <!-- </div> -->
           </div>
-
-          <div class="overlay" id="overlay"></div>
-
-          <nav class="nav" id="nav">
-            <button class="close-btn" id="closeBtn">&times;</button>
-            <ul class="nav-collapse">
-              <li>
-                <a href="./index.html" style="color: #543ad7">Home</a>
-              </li>
-              <li><a href="./aboutus.html">About us</a></li>
-              <li><a href="./property.html">Properties</a></li>
-              <li>
-                <a href="./contactus.html" class="contact">Contact us</a>
-              </li>
-              <li><a href="" class="logins" id="mobileLoginBtn">login</a></li>
-            </ul>
-          </nav>
-
-          <!-- </div> -->
         </div>
-      </div>
-      <div class="hero-section" data-aos="fade-up" data-aos-duration="1000">
-        <h1>
-          perfect platform for buying or <br />renting
-          <span>houses, flats and villas</span>
-        </h1>
-        <p>Search thousands of homes. Find the one that fits you.</p>
-      </div>
-    </header>
+        <div class="hero-section" data-aos="fade-up" data-aos-duration="1000">
+          <h1>
+            perfect platform for buying or <br />renting
+            <span>houses, flats and villas</span>
+          </h1>
+          <p>Search thousands of homes. Find the one that fits you.</p>
+        </div>
+      </header>
 
-    <div class="floating-range-hero">
-      <div class="container">
-        <div class="row">
-          <div class="rent">
-            <div class="form-group rent-select">
-              <select>
-                <option>Rent</option>
-                <option>Buy</option>
-                <option>Lease</option>
-              </select>
-            </div>
-            <div>Price Range</div>
-            <div class="form-group USD-select">
-              <select>
-                <option>Rent</option>
-                <option>Buy</option>
-                <option>Lease</option>
-              </select>
-            </div>
-          </div>
-          <div class="col6 range">
-            <div class="form-group location-input">
-              <input
-                type="text"
-                placeholder="Your desired location goes here"
-              />
-            </div>
-            <div class="price-range">
-              <div class="range-slider">
-                <div class="range-track"></div>
-                <div class="range-thumb left"></div>
-                <div class="range-thumb right"></div>
+      <div class="floating-range-hero">
+        <div class="container">
+          <div class="row">
+            <div class="rent">
+              <div class="form-group rent-select">
+                <select>
+                  <option>Rent</option>
+                  <option>Buy</option>
+                  <option>Lease</option>
+                </select>
+              </div>
+              <div>Price Range</div>
+              <div class="form-group USD-select">
+                <select>
+                  <option>Rent</option>
+                  <option>Buy</option>
+                  <option>Lease</option>
+                </select>
               </div>
             </div>
-            <div class="price-values">
-              <div class="price-value">$ 5,000</div>
-              <div class="price-value">$ 15,000</div>
+            <div class="col6 range">
+              <div class="form-group location-input">
+                <input
+                  type="text"
+                  placeholder="Your desired location goes here"
+                />
+              </div>
+              <div class="price-range">
+                <div class="range-slider">
+                  <div class="range-track"></div>
+                  <div class="range-thumb left"></div>
+                  <div class="range-thumb right"></div>
+                </div>
+              </div>
+              <div class="price-values">
+                <div class="price-value">$ 5,000</div>
+                <div class="price-value">$ 15,000</div>
+              </div>
             </div>
+            <div class="house">
+              <div class="form-group house-select">
+                <select>
+                  <option>House</option>
+                  <option>Apartment</option>
+                  <option>Condo</option>
+                </select>
+              </div>
+              <div class="form-group rooms-select">
+                <select>
+                  <option>2 Rooms</option>
+                  <option>1 Room</option>
+                  <option>3 Rooms</option>
+                  <option>4+ Rooms</option>
+                </select>
+              </div>
+            </div>
+            <div class="search">search</div>
           </div>
-          <div class="house">
-            <div class="form-group house-select">
-              <select>
-                <option>House</option>
-                <option>Apartment</option>
-                <option>Condo</option>
-              </select>
-            </div>
-            <div class="form-group rooms-select">
-              <select>
-                <option>2 Rooms</option>
-                <option>1 Room</option>
-                <option>3 Rooms</option>
-                <option>4+ Rooms</option>
-              </select>
-            </div>
-          </div>
-          <div class="search">search</div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- ------------------------------------------------ -->
+    <!-- ------------explore apartment type------------------------------------ -->
     <section
       class="xplr-aprtmnt-typs"
       data-aos="fade-up"
@@ -372,7 +374,7 @@
       </div>
     </section>
 
-    <!-- ----------------------------------------------------------------- -->
+    <!-- --------swiper listed property----------------------- -->
 
     <section
       class="swiper-listed-properties"
@@ -398,121 +400,153 @@
             <div class="swiper propertySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="property-card">
-                    <div class="property-image property-1">
-                      <div class="property-rating">
-                        <img src="./img/home-images/star.png" alt="" />
-                        <span>4.8</span>
+
+                  <div class="swiper-card one">
+                    <div class="card-contents">
+                      <div class="property-infor">
+                        <div class="title">Sobha HeartLand Villa</div>
+                        <div class="rating">
+                          <img src="./img/home-images/star.png" alt="" /> 4.8
+                        </div>
                       </div>
-                    </div>
-                    <div class="property-content">
-                      <h3 class="property-title">Sobha Heartland Villa</h3>
-                      <div class="property-location">
-                        <img src="./img/home-images/location.png" alt="" />
-                        Berlin, Germany
+                      <div class="property-actions">
+                        <span class="location"
+                          ><img
+                            src="./img/home-images/location.png"
+                            alt=""
+                          />Berlin, Germany</span
+                        >
+                        <a class="details-btn" href="./property-detail.html"
+                          >Detail</a
+                        >
                       </div>
-                      <button class="detail-btn">Detail</button>
                     </div>
                   </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <div class="property-card">
-                    <div class="property-image property-2">
-                      <div class="property-rating">
-                        <img src="./img/home-images/star.png" alt="" />
-                        <span>4.8</span>
+                  <div class="swiper-card two">
+                    <div class="card-contents">
+                      <div class="property-infor">
+                        <div class="title">Hillside Haven</div>
+                        <div class="rating">
+                          <img src="./img/home-images/star.png" alt="" /> 4.8
+                        </div>
                       </div>
-                    </div>
-                    <div class="property-content">
-                      <h3 class="property-title">Hillside Haven</h3>
-                      <div class="property-location">
-                        <img src="./img/home-images/location.png" alt="" />
-                        Genoa, Italy
+                      <div class="property-actions">
+                        <span class="location"
+                          ><img
+                            src="./img/home-images/location.png"
+                            alt=""
+                          />Geona, Italy</span
+                        >
+                        <a class="details-btn" href="./property-detail.html"
+                          >Detail</a
+                        >
                       </div>
-                      <button class="detail-btn">Detail</button>
                     </div>
                   </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <div class="property-card">
-                    <div class="property-image property-3">
-                      <div class="property-rating">
-                        <img src="./img/home-images/star.png" alt="" />
-                        <span>4.8</span>
+                  <div class="swiper-card three">
+                    <div class="card-contents">
+                      <div class="property-infor">
+                        <div class="title">Island Paradise Villa</div>
+                        <div class="rating">
+                          <img src="./img/home-images/star.png" alt="" /> 4.8
+                        </div>
                       </div>
-                    </div>
-                    <div class="property-content">
-                      <h3 class="property-title">Island Paradise Villa</h3>
-                      <div class="property-location">
-                        <img src="./img/home-images/location.png" alt="" />
-                        Paris, France
+                      <div class="property-actions">
+                        <span class="location"
+                          ><img
+                            src="./img/home-images/location.png"
+                            alt=""
+                          />Berlin, Germany</span
+                        >
+                        <a class="details-btn" href="./property-detail.html"
+                          >Detail</a
+                        >
                       </div>
-                      <button class="detail-btn">Detail</button>
                     </div>
                   </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <div class="property-card">
-                    <div class="property-image property-4">
-                      <div class="property-rating">
-                        <img src="./img/home-images/star.png" alt="" />
-                        <span>4.8</span>
+                  <div class="swiper-card four">
+                    <div class="card-contents">
+                      <div class="property-infor">
+                        <div class="title">Emerald Coast Manor</div>
+                        <div class="rating">
+                          <img src="./img/home-images/star.png" alt="" /> 4.8
+                        </div>
                       </div>
-                    </div>
-                    <div class="property-content">
-                      <h3 class="property-title">Emerald Coast Manor</h3>
-                      <div class="property-location">
-                        <img src="./img/home-images/location.png" alt="" />
-                        Lyon, France
+                      <div class="property-actions">
+                        <span class="location"
+                          ><img
+                            src="./img/home-images/location.png"
+                            alt=""
+                          />Berlin, Germany</span
+                        >
+                        <a class="details-btn" href="./property-detail.html"
+                          >Detail</a
+                        >
                       </div>
-                      <button class="detail-btn">Detail</button>
                     </div>
                   </div>
                 </div>
 
                 <!-- Additional slides for demonstration -->
                 <div class="swiper-slide">
-                  <div class="property-card">
-                    <div class="property-image property-1">
-                      <div class="property-rating">
-                        <img src="./img/home-images/star.png" alt="" />
-                        <span>4.7</span>
+                  <div class="swiper-card one">
+                    <div class="card-contents">
+                      <div class="property-infor">
+                        <div class="title">Sobha HeartLand Villa</div>
+                        <div class="rating">
+                          <img src="./img/home-images/star.png" alt="" /> 4.8
+                        </div>
                       </div>
-                    </div>
-                    <div class="property-content">
-                      <h3 class="property-title">Mountain View Estate</h3>
-                      <div class="property-location">
-                        <img src="./img/home-images/location.png" alt="" />
-                        Swiss Alps, Switzerland
+                      <div class="property-actions">
+                        <span class="location"
+                          ><img
+                            src="./img/home-images/location.png"
+                            alt=""
+                          />Berlin, Germany</span
+                        >
+                        <a class="details-btn" href="./property-detail.html"
+                          >Detail</a
+                        >
                       </div>
-                      <button class="detail-btn">Detail</button>
                     </div>
                   </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <div class="property-card">
-                    <div class="property-image property-2">
-                      <div class="property-rating">
-                        <img src="./img/home-images/star.png" alt="" />
-                        <span>4.9</span>
+                  <div class="swiper-card two">
+                    <div class="card-contents">
+                      <div class="property-infor">
+                        <div class="title">Sobha HeartLand Villa</div>
+                        <div class="rating">
+                          <img src="./img/home-images/star.png" alt="" /> 4.8
+                        </div>
                       </div>
-                    </div>
-                    <div class="property-content">
-                      <h3 class="property-title">Coastal Luxury Home</h3>
-                      <div class="property-location">
-                        <img src="./img/home-images/location.png" alt="" />
-                        Barcelona, Spain
+                      <div class="property-actions">
+                        <span class="location"
+                          ><img
+                            src="./img/home-images/location.png"
+                            alt=""
+                          />Geona, Italy</span
+                        >
+                        <a class="details-btn" href="./property-detail.html"
+                          >Detail</a
+                        >
                       </div>
-                      <button class="detail-btn">Detail</button>
                     </div>
                   </div>
                 </div>
+
               </div>
-              <div class="swiper-pagination"></div>
+              <!-- <div class="swiper-pagination"></div> -->
             </div>
           </div>
         </div>

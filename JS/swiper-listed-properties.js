@@ -8,28 +8,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Responsive breakpoints
     breakpoints: {
+      250: {
+        slidesPerView: 0.5,
+        spaceBetween: 10,
+      },
       // When window width is >= 320px
       320: {
-        slidesPerView: 1,
+        slidesPerView: 1.2,
         spaceBetween: 20,
       },
       // When window width is >= 480px
       438: {
-        slidesPerView: 1.2,
+        slidesPerView: 1.4,
         spaceBetween: 20,
       },
       // When window width is >= 768px
-      786: {
-        slidesPerView: 2,
+      686: {
+        slidesPerView: 2.4,
         spaceBetween: 25,
       },
+      946: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
       // When window width is >= 992px
-      961: {
+      960: {
         slidesPerView: 3,
         spaceBetween: 30,
       },
       // When window width is >= 1200px
-      1044: {
+      1200: {
         slidesPerView: 4,
         spaceBetween: 30,
       },

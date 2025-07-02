@@ -4,7 +4,8 @@
   box-sizing: border-box;
   font-family: lato, sans-serif;
 }
-html,body {
+html,
+body {
   overflow-x: hidden !important;
 }
 body[data-aos-easing] {
@@ -39,7 +40,7 @@ a:hover {
 header {
   padding: 16px 30px;
   background: url("../img/aboutus-images/hero-img.png") no-repeat center/cover;
-  margin: 17px 30px;
+  /* margin: 17px 30px; */
   border-radius: 30px;
   min-height: 462px;
 }
@@ -624,7 +625,9 @@ header > div > div > div {
   /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card11:hover, .card22:hover, .card33:hover {
+.card11:hover,
+.card22:hover,
+.card33:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
@@ -667,7 +670,6 @@ header > div > div > div {
   /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .profile-image {
   width: 100%;
@@ -1086,8 +1088,11 @@ header > div > div > div {
 
 /* ------------------------------------------- */
 @media screen and (max-width: 992px) {
-  header {
+  .header-container {
     margin: 0;
+    border-radius: 0;
+  }
+  header {
     border-radius: 0;
   }
   .floating-range-hero > div > div {

@@ -4,7 +4,8 @@
   box-sizing: border-box;
   font-family: lato, sans-serif;
 }
-html,body {
+html,
+body {
   overflow-x: hidden !important;
 }
 body[data-aos-easing] {
@@ -39,7 +40,7 @@ a:hover {
 header {
   padding: 16px 9px;
   background: url("../img/aboutus-images/hero-img.png") no-repeat center/cover;
-  margin: 17px 30px;
+  /* margin: 17px 30px; */
   border-radius: 30px;
   min-height: 462px;
 }
@@ -433,7 +434,6 @@ input {
   /* width: 100%; */
 }
 
-
 select:focus,
 input:focus {
   border-color: #6366f1;
@@ -551,7 +551,7 @@ input:focus {
   padding-top: 75px;
 } */
 /* Sidebar Styles */
-.mobile-filter-btn{
+.mobile-filter-btn {
   display: none;
   /* position: fixed; */
   top: 20px;
@@ -1215,8 +1215,11 @@ input:focus {
 }
 /* ---------------------------------------------- */
 @media screen and (max-width: 992px) {
-  header {
+  .header-container {
     margin: 0;
+    border-radius: 0;
+  }
+  header {
     border-radius: 0;
   }
   .floating-range-hero > div > div {
@@ -1586,10 +1589,9 @@ input:focus {
     left: 0;
   }
 
-  .property-about-detail-info{
+  .property-about-detail-info {
     margin-top: -45px;
   }
-
 }
 /* ------------------------------------------------ */
 @media screen and (max-width: 320px) {
